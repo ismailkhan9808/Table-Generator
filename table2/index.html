@@ -1,0 +1,173 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    background-color: rgb(113, 134, 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    color: Black;
+}
+
+header h1 {
+    font-size: 60px;
+    margin: 0;
+    text-decoration: underline;
+}
+
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    margin-left: 20px;
+}
+
+input {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(35, 15, 254);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color:rgb(7, 57, 45);
+    color: wheat;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+    .table {
+        width: 50%;
+        padding: 15px;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Math Table Generator</h1>
+    </header>
+    <div class="table">
+        <label for="writeNumOfTable" class="table">
+          Number of Table:
+          <input class="table" type="number" id="Numoftable" />
+        </label>
+        <br>
+        <label for="countTheNumber" class="table">
+          Number of count:
+          <input class="table" type="number" id="countNumber" />
+        </label>
+        <br>
+        <br>
+        <button onclick="generateTable()" class="table">Generate</button>
+        <table id="writeTable" class="table"></table>
+      </div>
+  <script>
+
+    function generateTable(){
+    let getNumber = Number (document.getElementById("Numoftable").value);
+    let countNumber = Number (document.getElementById("countNumber").value);
+    let mathTable = "";
+    for(let i = 1; i <= countNumber; i++){ 
+        mathTable += `<tr><td>${getNumber}</td><td>x</td><td>${i}</td><td>=</td><td>${getNumber * i}</td></tr>`;
+    }
+    document.getElementById("writeTable").innerHTML = mathTable;
+};
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+  </body>
+</html>
